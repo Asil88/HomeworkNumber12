@@ -28,12 +28,12 @@ class Reader {
 
         for (String s : strings) {
             if (s.length() == 15 && (s.startsWith("docnum") || s.startsWith("contract"))) {
-                BufferedWriter bufferedWriter1 = Files.newBufferedWriter(Path.of("ValidStrings.txt"));
-                bufferedWriter1.write(s);
+                BufferedWriter validWriter = Files.newBufferedWriter(Path.of("ValidStrings.txt"));
+                validWriter.write(s);
 
             } else {
-                BufferedWriter bufferedWriter2 = Files.newBufferedWriter(Path.of("InvalidStrings.txt"));
-                bufferedWriter2.write(s);
+                BufferedWriter invalidWriter = Files.newBufferedWriter(Path.of("InvalidStrings.txt"));
+                invalidWriter.write(s);
             }
         }
     }
