@@ -13,43 +13,58 @@ public class Main {
         Path path = Path.of(scanner.nextLine());
         try {
             Reader.readDoc(path);
-        } catch (IOException | ValidException e) {
+        } catch (IOException  e) {
             System.out.println(e.getMessage());
         }
     }
 }
 class Reader {
 
-    public static void readDoc(Path path) throws ValidException, IOException {
+    public static void readDoc(Path path) throws  IOException {
         List<String> strings = Files.readAllLines(path);
+
         BufferedWriter validWriter = Files.newBufferedWriter(Path.of("ValidStrings.txt"));
         BufferedWriter invalidWriter = Files.newBufferedWriter(Path.of("InvalidStrings.txt"));
         try {
             for (String s : strings) {
+                Condition.validationTrue(s);
                 if (s.length() == 15 && (s.startsWith("docnum") || s.startsWith("contract"))) {
                     validWriter.write(s + "\n");
                 }
             }
-        } catch (ValidException | IOException e) {
-            throw new ValidException();
-
+        } catch (ValidException e) {
+            System.out.println(e.getMessage());
         } finally {
             validWriter.close();
         }
+
+
         try {
             for (String s : strings) {
+                Condition.validationTrue(s);
                 if (s.length() != 15 && (!s.startsWith("docnum") || !s.startsWith("contract"))) {
                     invalidWriter.write(s + "\n");
                 }
             }
-        } catch (ValidException | IOException e) {
+        } catch (ValidException e) {
             System.out.println(e.getMessage());
-            throw new ValidException(e);
         } finally {
             invalidWriter.close();
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
     class Condition {
         public static void validationTrue(String s) throws ValidException {
             if (s.length() != 15 && (!s.startsWith("docnum") || !s.startsWith("contract"))) {
