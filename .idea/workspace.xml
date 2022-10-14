@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c1a5b0b2-71b3-4fb7-b734-4bbe19ec629a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InvalidStrings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/InvalidStrings.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task1/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,18 +33,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Anton/Programming/IdeaProjects/TeachSkills/JavaHomework/HomeworkNumber12",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Anton/Programming/IdeaProjects/TeachSkills/JavaHomework/HomeworkNumber12&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Anton\Programming\IdeaProjects\TeachSkills\JavaHomework\HomeworkNumber12" />
@@ -59,7 +60,11 @@
       <option name="presentableId" value="Default" />
       <updated>1665344635131</updated>
       <workItem from="1665344636473" duration="18033000" />
-      <workItem from="1665577221520" duration="715000" />
+      <workItem from="1665577221520" duration="2387000" />
+      <workItem from="1665658456269" duration="13000" />
+      <workItem from="1665658508360" duration="27000" />
+      <workItem from="1665735983519" duration="1476000" />
+      <workItem from="1665774377758" duration="539000" />
     </task>
     <task id="LOCAL-00001" summary="1task">
       <created>1665494220434</created>
@@ -82,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665499468140</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="task 1">
+      <created>1665578184541</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665578184541</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,16 +104,5 @@
     <MESSAGE value="1task" />
     <MESSAGE value="task 1" />
     <option name="LAST_COMMIT_MESSAGE" value="task 1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/task1/Main.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

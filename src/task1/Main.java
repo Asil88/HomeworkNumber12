@@ -13,63 +13,44 @@ public class Main {
         Path path = Path.of(scanner.nextLine());
         try {
             Reader.readDoc(path);
-        } catch (IOException  e) {
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
 }
+
 class Reader {
 
-    public static void readDoc(Path path) throws  IOException {
+    public static void readDoc(Path path) throws IOException {
         List<String> strings = Files.readAllLines(path);
 
         BufferedWriter validWriter = Files.newBufferedWriter(Path.of("ValidStrings.txt"));
         BufferedWriter invalidWriter = Files.newBufferedWriter(Path.of("InvalidStrings.txt"));
-        try {
-            for (String s : strings) {
+        for (String s : strings) {
+            try {
                 Condition.validationTrue(s);
-                if (s.length() == 15 && (s.startsWith("docnum") || s.startsWith("contract"))) {
-                    validWriter.write(s + "\n");
-                }
+            } catch (ValidException e) {
+                System.out.println(e.getMessage());
             }
-        } catch (ValidException e) {
-            System.out.println(e.getMessage());
-        } finally {
-            validWriter.close();
+
+            if (s.length() == 15 && (s.startsWith("docnum") || s.startsWith("contract"))) {
+                validWriter.write(s + "\n");
+            } else {
+                invalidWriter.write(s + "\n");
+            }
         }
 
 
-        try {
-            for (String s : strings) {
-                Condition.validationTrue(s);
-                if (s.length() != 15 && (!s.startsWith("docnum") || !s.startsWith("contract"))) {
-                    invalidWriter.write(s + "\n");
-                }
-            }
-        } catch (ValidException e) {
-            System.out.println(e.getMessage());
-        } finally {
-            invalidWriter.close();
-        }
+        validWriter.close();
+        invalidWriter.close();
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-    class Condition {
-        public static void validationTrue(String s) throws ValidException {
-            if (s.length() != 15 && (!s.startsWith("docnum") || !s.startsWith("contract"))) {
-                throw new ValidException("Номер " + s + " дожен начинаться c docnum или contract и состоять из 15 символов");
-            }
+class Condition {
+    public static void validationTrue(String s) throws ValidException {
+        if (s.length() != 15 && (!s.startsWith("docnum") || !s.startsWith("contract"))) {
+            throw new ValidException("Номер " + s + " дожен начинаться c docnum или contract и состоять из 15 символов");
         }
     }
+}
 
